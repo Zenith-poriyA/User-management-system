@@ -1,0 +1,23 @@
+<!--include header-->
+<%- include('include/_header')%>
+<!--/include header-->
+
+<!--main site-->
+<div class="row">
+    <div class="col-md-8 offset-md-2">
+        <a class="btn btn-primary" href="/" role="button" style="font-family: 'Varela Round', sans-serif;"><i
+                    class="fas fa-angle-double-left"></i> All User</a>
+        <div class="text-center new-user">
+            <h4 class="text-success font-weight-bold">New User</h4>
+            <p class="lead text-info">Use the below form to create a new account</p>
+        </div>
+        <!--new user form-->
+        <%- include('include/_form')%>
+        <!--/new user form-->
+    </div>
+</div>
+<!--/main site-->
+
+<!--include footer-->
+<%- include('include/_footer')%>
+<!--/include footer-->

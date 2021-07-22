@@ -1,0 +1,66 @@
+<!--include header-->
+<%- include('include/_header')%>
+<!--/include header-->
+
+<!--main site-->
+<div class="row">
+    <div class="col-md-8 offset-md-2">
+        <a class="btn btn-success" href="/" role="button" style="font-family: 'Varela Round', sans-serif;"><i
+                    class="fas fa-angle-double-left"></i> All User</a>
+        <div class="text-center new-user">
+            <h4 class="text-warning font-weight-bold">Update User</h4>
+            <p class="lead text-secondary text-info">Use the below form to update an new account</p>
+        </div>
+        <form method="POST" id="update_useR">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <input type="hidden" name="id" value="<%= user._id%>">
+                    <label for="inputName">Name</label>
+                    <input type="text" class="form-control" id="inputName" placeholder="Name" value="<%= user.name%>" name="name">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputEmail">Email</label>
+                    <input type="email" class="form-control" id="inputEmail" placeholder="Email" value="<%= user.email%>" name="email">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inlineRadio3">Gender</label>
+                    <div class="form-group form-control" style="border: none;">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender" id="inlineRadio1" value="Male" <%= user.gender == 'Male'?'checked':''%>>
+                            <label class="form-check-label" for="inlineRadio1">Male</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender" id="inlineRadio2" value="Female" <%= user.gender == 'Female'?'checked':''%>>
+                            <label class="form-check-label" for="inlineRadio2">Female</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender" id="inlineRadio3" value="Other" <%= user.gender == 'Other'?'checked':''%>>
+                            <label class="form-check-label" for="inlineRadio3">Other</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inlineradio2">Status</label>
+                    <div class="form-group form-control" style="border: none;">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="status" id="inlineradio1" value="Active" <%= user.status == 'Active'?'checked':''%>>
+                            <label class="form-check-label" for="inlineradio1">Active</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="status" id="inlineradio2" value="Inactive" <%= user.status == 'Inactive'?'checked':''%>>
+                            <label class="form-check-label" for="inlineradio2">Inactive</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-success col-md-12 bg-warning border-warning" role="button" style="font-family: 'Varela Round', sans-serif;" type="submit">Update</button>
+        </form>
+    </div>
+</div>
+<!--/main site-->
+
+<!--include footer-->
+<%- include('include/_footer')%>
+<!--/include footer-->

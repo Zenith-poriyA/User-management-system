@@ -1,0 +1,35 @@
+
+<!--include header-->
+<%- include('include/_header')%>
+<!--/include header-->
+
+<!--main site-->
+<div class="row">
+    <div class="col-md-8 offset-md-2">
+        <a class="btn btn-success" href="./add_user" role="button" style="font-family: 'Varela Round', sans-serif;"><i class="fas fa-user-plus"></i> Add User</a>
+        <form action="#" method="post">
+            <table class="table table-hover">
+                <thead class="bg-secondary text-light">
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Gender</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!--table data-->
+                    <%- include('include/_show')%>
+                    <!--/table data-->
+                </tbody>
+            </table>
+        </form>
+    </div>
+</div>
+<!--/main site-->
+
+<!--include footer-->
+<%- include('include/_footer')%>
+<!--/include footer-->
