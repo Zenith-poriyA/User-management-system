@@ -1,7 +1,7 @@
-node_modules
+/node_modules
 
-config.env
+/config.env
 
-Description.jpg
+/Description.jpg
 
-package-lock.json
+/package-lock.json
